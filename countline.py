@@ -1,6 +1,10 @@
 def main():
    filename = raw_input("Enter Name of the File:")
-   fhandle = open (filename)
+   try:
+      fhandle = open (filename)
+   except:
+       print 'Unable to open the file:',filename
+       exit()
    count = 0
    for line in fhandle:
        count= count+1
