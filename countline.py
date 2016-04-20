@@ -9,6 +9,9 @@ def main():
    input = fhandle.read()
    print len(input)
    print input[:100]
-
+   fhandle = open (filename)
+   for line in fhandle:
+       if line.startswith('def'):
+           print line
 if __name__ == "__main__":
      main()
