@@ -11,6 +11,7 @@ def main():
    print input[:100]
    fhandle = open (filename)
    for line in fhandle:
+       line = line.rstrip()
        if line.startswith('def'):
            print line
 if __name__ == "__main__":
